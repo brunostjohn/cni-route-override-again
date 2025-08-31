@@ -19,7 +19,7 @@ Installing using the provided daemonset will copy the `route-override` binary to
 git clone https://github.com/redhat-nfvpe/cni-route-override.git && cd cni-route-override/
 kubectl create -f deployments/daemonset-install.yaml
 ```
-
+<!-- -->
 ## Example Configuration
 
 ```
