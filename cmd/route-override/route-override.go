@@ -300,6 +300,14 @@ func cmdAdd(args *skel.CmdArgs) error {
 		return err
 	}
 
+	if overrideConf == nil {
+		return fmt.Errorf("overrideConf is nil")
+	}
+
+	if overrideConf.PrevResult == nil {
+		return fmt.Errorf("overrideConf.PrevResult is nil")
+	}
+
 	newResult, err := processRoutes(args.Netns, overrideConf)
 	if err != nil {
 		return fmt.Errorf("failed to override routes: %v", err)
